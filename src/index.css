@@ -1,0 +1,185 @@
+/* ===== SMB TEAM DESIGN SYSTEM ===== */
+:root {
+  --navy: #001B2E;
+  --navy-light: #002A45;
+  --navy-mid: #003A59;
+  --green: #69CD2B;
+  --green-dim: rgba(105, 205, 43, 0.15);
+  --green-glow: rgba(105, 205, 43, 0.3);
+  --blue: #0091C9;
+  --white: #FFFFFF;
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(105, 205, 43, 0.3);
+  --red: #ff4444;
+
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--navy);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+p { margin: 0; }
+a { color: var(--green); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button { font-family: inherit; cursor: pointer; }
+input { font-family: inherit; }
+
+/* ===== SCROLL PROGRESS ===== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--green);
+  z-index: 200;
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px var(--green-glow);
+}
+
+/* ===== SECTION FOUNDATIONS ===== */
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.section-title {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--white-60);
+  max-width: 640px;
+  line-height: 1.7;
+}
+
+/* ===== DIVIDER ===== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green-dim), transparent);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(105, 205, 43, 0.15); }
+  50% { box-shadow: 0 0 50px rgba(105, 205, 43, 0.35); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes scrollDown {
+  0% { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(105, 205, 43, 0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(105, 205, 43, 0); }
+}
+
+@keyframes optionSlide {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes badgePop {
+  from { opacity: 0; transform: scale(0.7); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ===== SHARED MICRO-INTERACTIONS ===== */
+.scan-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.scan-dot.live {
+  background: var(--green);
+  animation: dotPulse 2s ease infinite;
+}
+
+.cursor-blink {
+  animation: blink 0.8s step-end infinite;
+  color: var(--green);
+  font-weight: 300;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--navy-mid); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--green); }
