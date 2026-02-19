@@ -29,6 +29,7 @@ export default function MetricsBar() {
 
   return (
     <div className="metrics-bar" ref={ref}>
+      <div className="metrics-bar-label">2025 Wrap-Up Stats</div>
       <div className="metrics-track">
         {metrics.map((m, i) => (
           <div

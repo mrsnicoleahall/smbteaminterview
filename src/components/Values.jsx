@@ -3,7 +3,7 @@ import { useState } from 'react'
 const values = [
   {
     title: "Be the Bar",
-    teaser: "Don't set the standard. Become it.",
+    teaser: "Be what everyone else is striving for.",
     caseTitle: "840 Activations in 30 Days",
     problem: "B2B SaaS product launching a major feature with zero positioning strategy and 60-day runway.",
     action: "Ran 28 user interviews, validated positioning with real data, built a 12-page sales playbook, A/B tested 3 landing page variants, and coordinated a cross-channel launch.",
