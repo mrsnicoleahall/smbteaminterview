@@ -25,12 +25,12 @@ const values = [
   },
   {
     title: "3-Way-Winners",
-    teaser: "Marketing wins. Sales wins. Customers win.",
+    teaser: "The company wins. The team wins. The client wins.",
     caseTitle: "Hybrid Funnel Rebuild",
     problem: "Mid-market services brand where leads rose but conversions collapsed — a classic marketing-sales misalignment.",
     action: "Rewrote positioning from features to outcomes, simplified lead capture, rebuilt key pages in React SSG, implemented server-side GA4 events, automated lead routing to sales with 2-hour SLA.",
     result: "CPL down 37% in 60 days. Close rate jumped from 14% to 24%. Time to first contact: 22 hours down to 2 hours.",
-    impact: "Marketing generates better leads. Sales closes faster. Customers get served immediately. Three-way win.",
+    impact: "The company grows revenue. The team operates with clarity. The client gets served immediately. Three-way win.",
     link: "https://nicole.hallghosts.com",
     metrics: ["CPL -37%", "Close rate: 14% → 24%", "2-hr response time"]
   },
