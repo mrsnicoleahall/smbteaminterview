@@ -21,7 +21,7 @@ const cases = [
     id: 'attribution',
     label: 'Fixed Broken Attribution',
     subtitle: 'From 42% to 94% Accuracy',
-    title: 'Rebuilt Attribution to Unlock $340K in Hidden Value',
+    title: 'Rebuilt Attribution to Unlock $10.6M in Hidden Value',
     context: 'iOS14+ privacy changes degraded Facebook pixel attribution from 78% to 42%. The team was effectively blind — scaling decisions were based on incomplete data, and leadership couldn\'t trust reported ROAS.',
     strategy: 'Implemented server-side Google Tag Manager on Google Cloud Platform, Meta Conversions API for server-to-server purchase data, Google Ads enhanced conversions, and event deduplication. Built custom Looker Studio dashboard connecting Meta, Google Ads, and Shopify with blended 7-day and 30-day ROAS windows. Separately, built a multi-touch attribution model in BigQuery that revealed content and social drove 40% of pipeline — previously invisible to last-click.',
     tools: ['Server-Side GTM', 'Meta CAPI', 'BigQuery', 'Looker Studio', 'Google Cloud', 'GA4'],

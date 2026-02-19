@@ -1,12 +1,15 @@
 import './App.css'
 import Hero from './components/Hero'
 import MetricsBar from './components/MetricsBar'
+import NavBar from './components/NavBar'
+import WhyHomeServices from './components/WhyHomeServices'
 import Values from './components/Values'
+import Roadmap from './components/Roadmap'
+import Governance from './components/Governance'
 import GrowthSimulator from './components/GrowthSimulator'
 import SystemsArchitecture from './components/SystemsArchitecture'
 import RetentionEngine from './components/RetentionEngine'
 import CaseStudies from './components/CaseStudies'
-import Roadmap from './components/Roadmap'
 import Close from './components/Close'
 import ScrollProgress from './components/ScrollProgress'
 import useInView from './hooks/useInView'
@@ -31,9 +34,16 @@ function App() {
   return (
     <div>
       <ScrollProgress />
+      <NavBar />
       <Hero />
 
       <MetricsBar />
+
+      <div className="section-divider" />
+
+      <AnimatedSection>
+        <WhyHomeServices />
+      </AnimatedSection>
 
       <div className="section-divider" />
 
@@ -44,7 +54,13 @@ function App() {
       <div className="section-divider" />
 
       <AnimatedSection>
-        <GrowthSimulator />
+        <Roadmap />
+      </AnimatedSection>
+
+      <div className="section-divider" />
+
+      <AnimatedSection>
+        <Governance />
       </AnimatedSection>
 
       <div className="section-divider" />
@@ -68,7 +84,7 @@ function App() {
       <div className="section-divider" />
 
       <AnimatedSection>
-        <Roadmap />
+        <GrowthSimulator />
       </AnimatedSection>
 
       <div className="section-divider" />
