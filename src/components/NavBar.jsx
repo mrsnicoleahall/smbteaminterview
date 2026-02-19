@@ -11,7 +11,7 @@ const sections = [
 ]
 
 const externalLinks = [
-  { href: 'https://nicole.hallghosts.com/blog', label: 'Blog' },
+  { href: 'https://medium.com/@mrsnicoleahall', label: 'Blog' },
   { href: 'https://nicole.hallghosts.com', label: 'Portfolio' },
   { href: 'https://nicole.hallghosts.com/contact', label: 'Contact' },
 ]

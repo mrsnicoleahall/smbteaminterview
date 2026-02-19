@@ -15,7 +15,7 @@ const cases = [
       { val: '$43', desc: 'Average CPL' },
       { val: '28%', desc: 'Lead-to-opp rate' }
     ],
-    gosmb: 'For GoSMB vertical expansion, I would replicate this exact playbook: structured validation, targeted content that earns trust, coordinated ABM for enterprise accounts, and full attribution so every dollar is accountable. The webinar-to-SQL pipeline alone — with its 2.3x conversion advantage — is a natural fit for GoSMB\'s educational positioning.'
+    gosmb: 'For SMBTeam vertical expansion, I would replicate this exact playbook: structured validation, targeted content that earns trust, coordinated ABM for enterprise accounts, and full attribution so every dollar is accountable. The webinar-to-SQL pipeline alone — with its 2.3x conversion advantage — is a natural fit for SMBTeam\'s educational positioning.'
   },
   {
     id: 'attribution',
@@ -31,7 +31,7 @@ const cases = [
       { val: '-22%', desc: 'CAC after reallocation' },
       { val: '1 week', desc: 'To 89% accuracy' }
     ],
-    gosmb: 'GoSMB\'s multi-vertical expansion requires rock-solid attribution to know which verticals, channels, and creatives actually drive revenue. I\'d build this infrastructure from day one — not after the budget is spent. Full-stack tracking architecture is the foundation every scaling decision sits on.'
+    gosmb: 'SMBTeam\'s multi-vertical expansion requires rock-solid attribution to know which verticals, channels, and creatives actually drive revenue. I\'d build this infrastructure from day one — not after the budget is spent. Full-stack tracking architecture is the foundation every scaling decision sits on.'
   },
   {
     id: 'paid-scale',
@@ -47,7 +47,7 @@ const cases = [
       { val: '-31%', desc: 'CAC reduction' },
       { val: '3.8%', desc: 'Landing page CVR' }
     ],
-    gosmb: 'GoSMB\'s paid channels need systematic creative testing and automation — not spray-and-pray. I\'d implement the same weekly cadence: test small, kill fast, scale winners. The UGC insight alone (5.8x vs 3.2x ROAS) represents the kind of data-driven creative decisions that separate profitable scale from expensive guessing.'
+    gosmb: 'SMBTeam\'s paid channels need systematic creative testing and automation — not spray-and-pray. I\'d implement the same weekly cadence: test small, kill fast, scale winners. The UGC insight alone (5.8x vs 3.2x ROAS) represents the kind of data-driven creative decisions that separate profitable scale from expensive guessing.'
   },
   {
     id: 'pipeline-zero',
@@ -63,7 +63,7 @@ const cases = [
       { val: '3.2 days', desc: 'Time-to-first-value' },
       { val: '-40%', desc: 'Demo-to-close time' }
     ],
-    gosmb: 'Every GoSMB vertical expansion is essentially a product launch into a new market. I\'d apply the same framework: interview-driven validation, research-backed positioning, coordinated cross-channel execution, and real-time activation tracking. The playbook infrastructure (battle cards, demo scripts, ROI guides) ensures sales can execute independently at scale.'
+    gosmb: 'Every SMBTeam vertical expansion is essentially a product launch into a new market. I\'d apply the same framework: interview-driven validation, research-backed positioning, coordinated cross-channel execution, and real-time activation tracking. The playbook infrastructure (battle cards, demo scripts, ROI guides) ensures sales can execute independently at scale.'
   }
 ]
 
@@ -76,7 +76,7 @@ export default function CaseStudies() {
         <span className="section-tag">Real Engagements, Real Numbers</span>
         <h2 className="section-title">Pick a Growth Challenge</h2>
         <p className="section-subtitle">
-          Select a challenge. See the strategy, tools, before/after metrics, and how I'd replicate the system inside GoSMB.
+          Select a challenge. See the strategy, tools, before/after metrics, and how I'd replicate the system inside SMBTeam.
         </p>
 
         <div className="case-options">
@@ -126,7 +126,7 @@ export default function CaseStudies() {
                   </div>
                 </div>
                 <div className="gosmb-box">
-                  <h5>What I'd Replicate Inside GoSMB</h5>
+                  <h5>What I'd Replicate Inside SMBTeam</h5>
                   <p>{c.gosmb}</p>
                 </div>
               </div>
