@@ -14,12 +14,12 @@ const values = [
   },
   {
     title: "Extreme Ownership",
-    teaser: "Own the pipeline. Own the number.",
+    teaser: "Own the outcome — even when it wasn't your fault.",
     caseTitle: "$2.4M Pipeline from Zero",
     problem: "Mid-market B2B company, $8M ARR, 100% dependent on cold outbound with declining response rates. Zero inbound.",
     action: "Built the entire demand engine: high-value lead magnets, paid social & search campaigns, quarterly webinar series, lead scoring with 12 behavioral signals, Salesforce + Marketo automation, and a 50-account ABM program.",
     result: "$2.4M in qualified pipeline within 6 months. 487 MQLs at $43 average CPL. 19 closed deals worth $680K. Sales cycle shortened from 6.3 to 4.8 months.",
-    impact: "Revenue clarity + sustainable funnel. Inbound went from 0% to 35% of total pipeline.",
+    impact: "Pipeline wasn't my mandate — but revenue was everyone's problem. I took accountability for the outcome and built the system to fix it.",
     link: "https://nicole.hallghosts.com",
     metrics: ["$2.4M pipeline", "487 MQLs", "$43 avg CPL"]
   },
