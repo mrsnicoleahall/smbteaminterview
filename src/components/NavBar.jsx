@@ -7,7 +7,6 @@ const sections = [
   { id: 'governance', label: 'Governance' },
   { id: 'cases', label: 'Case Studies' },
   { id: 'simulator', label: 'Simulator' },
-  { id: 'close', label: 'Close' },
 ]
 
 const externalLinks = [
