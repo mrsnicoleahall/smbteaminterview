@@ -117,7 +117,7 @@ function App() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
-  if (path === '/aa') return <AttorneyAssistantPage />
+  if (path === '/aa' || path === '/aa/') return <AttorneyAssistantPage />
   return <SMBPage />
 }
 
