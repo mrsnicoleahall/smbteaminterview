@@ -1,4 +1,5 @@
 import './App.css'
+import { useState, useEffect } from 'react'
 import Hero from './components/Hero'
 import MetricsBar from './components/MetricsBar'
 import NavBar from './components/NavBar'
@@ -13,6 +14,7 @@ import CaseStudies from './components/CaseStudies'
 import Close from './components/Close'
 import ScrollProgress from './components/ScrollProgress'
 import useInView from './hooks/useInView'
+import AttorneyAssistantPage from './AttorneyAssistant'
 
 function AnimatedSection({ children, delay = 0 }) {
   const [ref, inView] = useInView(0.08)
@@ -30,7 +32,7 @@ function AnimatedSection({ children, delay = 0 }) {
   )
 }
 
-function App() {
+function SMBPage() {
   return (
     <div>
       <ScrollProgress />
@@ -104,6 +106,19 @@ function App() {
       </footer>
     </div>
   )
+}
+
+function App() {
+  const [path, setPath] = useState(window.location.pathname)
+
+  useEffect(() => {
+    const onPopState = () => setPath(window.location.pathname)
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  if (path === '/aa') return <AttorneyAssistantPage />
+  return <SMBPage />
 }
 
 export default App
