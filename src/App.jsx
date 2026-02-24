@@ -108,6 +108,107 @@ function SMBPage() {
   )
 }
 
+function PasswordGate({ children }) {
+  const [authed, setAuthed] = useState(() => sessionStorage.getItem('site_authed') === '1')
+  const [user, setUser] = useState('')
+  const [pass, setPass] = useState('')
+  const [error, setError] = useState(false)
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (user === 'review' && pass === 'letmein') {
+      sessionStorage.setItem('site_authed', '1')
+      setAuthed(true)
+    } else {
+      setError(true)
+    }
+  }
+
+  if (authed) return children
+
+  return (
+    <div style={{
+      minHeight: '100vh',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: '#0B1930',
+      fontFamily: 'Poppins, system-ui, sans-serif',
+    }}>
+      <form onSubmit={handleSubmit} style={{
+        background: 'rgba(255,255,255,0.04)',
+        border: '1px solid rgba(255,255,255,0.1)',
+        borderRadius: '16px',
+        padding: '48px 40px',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '16px',
+        width: '100%',
+        maxWidth: '380px',
+      }}>
+        <h2 style={{ color: '#fff', fontSize: '24px', fontWeight: 700, textAlign: 'center', margin: 0 }}>
+          Enter Credentials
+        </h2>
+        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '13px', textAlign: 'center', margin: 0 }}>
+          This site is password protected.
+        </p>
+        <input
+          type="text"
+          placeholder="Username"
+          value={user}
+          onChange={e => { setUser(e.target.value); setError(false) }}
+          autoComplete="username"
+          style={{
+            padding: '14px 16px',
+            borderRadius: '8px',
+            border: error ? '1px solid #ef4444' : '1px solid rgba(255,255,255,0.12)',
+            background: 'rgba(255,255,255,0.06)',
+            color: '#fff',
+            fontSize: '14px',
+            outline: 'none',
+          }}
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          value={pass}
+          onChange={e => { setPass(e.target.value); setError(false) }}
+          autoComplete="current-password"
+          style={{
+            padding: '14px 16px',
+            borderRadius: '8px',
+            border: error ? '1px solid #ef4444' : '1px solid rgba(255,255,255,0.12)',
+            background: 'rgba(255,255,255,0.06)',
+            color: '#fff',
+            fontSize: '14px',
+            outline: 'none',
+          }}
+        />
+        {error && (
+          <p style={{ color: '#ef4444', fontSize: '12px', textAlign: 'center', margin: 0 }}>
+            Invalid credentials.
+          </p>
+        )}
+        <button type="submit" style={{
+          padding: '14px',
+          borderRadius: '8px',
+          border: 'none',
+          background: '#4EA7DD',
+          color: '#fff',
+          fontSize: '14px',
+          fontWeight: 700,
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          cursor: 'pointer',
+          marginTop: '8px',
+        }}>
+          Enter
+        </button>
+      </form>
+    </div>
+  )
+}
+
 function App() {
   const [path, setPath] = useState(window.location.pathname)
 
@@ -117,8 +218,9 @@ function App() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
-  if (path === '/aa' || path === '/aa/') return <AttorneyAssistantPage />
-  return <SMBPage />
+  const page = (path === '/aa' || path === '/aa/') ? <AttorneyAssistantPage /> : <SMBPage />
+
+  return <PasswordGate>{page}</PasswordGate>
 }
 
 export default App
